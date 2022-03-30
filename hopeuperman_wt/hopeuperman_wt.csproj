@@ -13,4 +13,13 @@
     <None Remove="NewFolder\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\celebrate-banner-min.jpg" />
+    <None Include="wwwroot\images\Hopeuperman.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\Images\" />
+  </ItemGroup>
+
 </Project>
