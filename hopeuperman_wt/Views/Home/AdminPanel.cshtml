@@ -1,306 +1,167 @@
-﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+﻿adminpanel.cshtml
 
-<div class='all'>
+<!--This is the admin panel-->
 
-  <div class='admin-header'>
+adminpanel.cshtml
 
-    <div class='header-text'>
-      <h3>Admin Panel 2.0</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <div class='header-greet'>
-        <span><i class="fa">&#xf007;</i> Hello Admin</span>
+        body {
+            background: #f5f6fa;
+        }
 
-        <a href='' class='logout-btn'><i class="fa">&#xf011;</i></a>
-      </div>
+        .wrapper .sidebar {
+            background: rgb(5, 68, 104);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 225px;
+            height: 100%;
+            padding: 20px 0;
+            transition: all 0.5s ease;
+        }
 
-    </div>
-  </div>
+        .wrapper .sidebar .profile{
+            margin-bottom: 30px;
+            text-align: center;
+        }
 
-  <div class='admin-sidebar'>
+        .wrapper .sidebar .profile img{
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
 
-    <li>
+        .wrapper .sidebar .profile h3{
+            color: #ffffff;
+            margin: 10px 0 5px;
+        }
 
-      <input placeholder='Search...' class='search-input' type='search' /><input type='submit' id='search-btn-1' class='fa' value='&#xf002;' />
+        .wrapper .sidebar .profile p{
+            color: rgb(206, 240, 253);
+            font-size: 14px;
+        }
 
-    </li>
+        .wrapper .sidebar ul li a{
+            display: block;
+            padding: 13px 30px;
+            border-bottom: 1px solid #10558d;
+            color: rgb(241, 237, 237);
+            font-size: 16px;
+            position: relative;
+        }
 
-    <li>
+        .wrapper .sidebar ul li a .icon{
+            color: #dee4ec;
+           width: 30px;
+            display: inline-block;
+}
+        .wrapper .sidebar ul li a:hover,
+        .wrapper .sidebar ul li a.active{
+            color: #0c7db1;
+            background:white;
+            border-right: 2px solid rgb(5, 68, 104);
+        }
 
-      <a href='#'><i class="fa">&#xf0e4;</i> Dashboard</a>
+        .wrapper .sidebar ul li a:hover .icon,
+        .wrapper .sidebar ul li a.active .icon{
+            color: #0c7db1;
+        }
 
-    </li>
+        .wrapper .sidebar ul li a:hover:before,
+        .wrapper .sidebar ul li a.active:before{
+            display: block;
+        }
 
-    <li>
+    </style>
+</head>
+<body>
 
-      <a href='#'><i class="fa">&#xf0c0;</i> Users</a>
-
-    </li>
-
-    <li>
-
-      <a href='#'><i class="fa">&#xf055;</i> Add Update</a>
-
-    </li>
-
-    <li>
-
-      <a href='#'><i class="fa">&#xf132;</i> Create Admin</a>
-
-    </li>
-
-    <span onclick="size()">
-      <li id='all-nav' onclick="myFunction()">
-
-        <a href='#' class='dropdown-btn'><i class="fa">&#xf05e;</i> Ban User </a> <i class="fa fa-angle-down" aria-hidden="true"></i>
-
-        <ul id='nav' class='second-nav-ul'>
-          <li class='nav-items'>
-            <a href='#'>Banned Ips</a>
-          </li>
-
-        </ul>
-
-      </li>
-
-    </span>
-
-    <li>
-
-      <a href='#'><i class="fa">&#xf233;</i> Server Info</a>
-
-    </li>
-
-  </div>
-
-  <div class='center-content'>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <div class='all-border'>
-
-      <div class='shows-location'>
-
-        <div class='location-text'>
-
-          <span class='location'>Admin <i class="fa">&#xf101;</i> Dashboard</span>
-
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+            <!--profile image & text-->
+            <div class="profile">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Abang_Johari_2022.jpg" alt="profile_picture">
+                <h3>Hopeuperman</h3>
+                <p>Designer</p>
+            </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-      </div>
-
-      <section>
-
-        <div class='site-info'>
-
-          <div class='all-quick-info'>
-
-            <div class='info-icon'><i class="fa">&#xf0c0;</i></div>
-
-            <div class='text-right'>
-              <div class='info-numbers'><span>15</span></div>
-              <div>Users</div>
-            </div>
-
-            <div class='info-box-footer'>
-
-              <a href='#' class='user-href'><span class="pull-left">View Details</span>
-
-                <span class='pull-right'><i class="fa fa-arrow-circle-right"></i></span></a>
-
-            </div>
-
-          </div>
-
-          <div style='background: #f0ad4e; border-color: #f0ad4e;' class='all-quick-info'>
-
-            <div class='info-icon'> <i class="fa">&#xf132;</i></div>
-
-            <div class='text-right'>
-              <div class='info-numbers'><span>2</span></div>
-              <div>Total Admins!</div>
-            </div>
-
-            <div class='info-box-footer'>
-
-              <a href='#' class='user-href' style='color: #f0ad4e;'><span class="pull-left">View Details</span>
-
-                <span class='pull-right'><i class="fa fa-arrow-circle-right"></i></span></a>
-
-            </div>
-
-          </div>
-
-          <div style='background: #5cb85c; border-color: #5cb85c;' class='all-quick-info'>
-
-            <div class='info-icon'> <i class="fa fa-envelope"></i></div>
-
-            <div class='text-right'>
-              <div class='info-numbers'><span>1,330</span></div>
-              <div>Total Messages!</div>
-            </div>
-
-            <div class='info-box-footer'>
-
-              <a href='#' class='user-href' style='color: #5cb85c;'><span class="pull-left">View Details</span>
-
-                <span class='pull-right'><i class="fa fa-arrow-circle-right"></i></span></a>
-
-            </div>
-
-          </div>
-
-          <div style='background: #ff5256; border-color: #ff5256;' class='all-quick-info'>
-
-            <div class='info-icon'><i class="fa">&#xf05e;</i></div>
-
-            <div class='text-right'>
-              <div class='info-numbers'><span>15</span></div>
-              <div>Banned Users!</div>
-            </div>
-
-            <div class='info-box-footer'>
-
-              <a href='#' class='user-href' style='color: #ff5256;'><span class="pull-left">View Details</span>
-
-                <span class='pull-right'><i class="fa fa-arrow-circle-right"></i></span></a>
-
-            </div>
-
-          </div>
-
         </div>
-        <div class='message-server'>
-          <span class='warn-message'><i class="fa">&#xf071;</i></span>
-          <span class='warn-message'>dashboard warning message!</span>
-          <span class='right warn-message'><i class="fa fa-times"></i></span>
-        </div>
-        <div class='new-content-holder'>
-          <div class='notifications'>
-            <div class='notify-header'>
-              <h2><i class="fa">&#xf0f3;</i> Notifications</h2>
-              <div class='action-holder'>
-                <i class="fa">&#xf106;</i> <i class="fa">&#xf013;</i>
-              </div>
-            </div>
+    <script>
 
-            <div class='notify-box'>
+    </script>
+</body>
+</html>
 
-              <div class='sender'>
-                <img src='https://tinyurl.com/wnje5dc' width='30' align='middle'></img>
-                <a href='#' title='view message'><span>FLUFFERS</span></a>
-                <span class='mail-icon'><i class="fa fa-envelope"></i></span>
-              </div>
-
-            </div>
-          </div>
-
-          <div class='notifications'>
-            <div class='notify-header'>
-              <h2><i class="fa">&#xf0ac;</i> Bandwidth</h2>
-              <div class='action-holder'>
-                <i class="fa">&#xf106;</i> <i class="fa">&#xf013;</i>
-              </div>
-            </div>
-
-            <div class='notify-box'>
-
-              <div class='sender'>
-                <span><i style="font-size:24px; color: grey" class="fa">&#xf0ac;</i></span>
-                <span style='color: grey; font-size: 10px;'>192.168.0.0 / 20.4 GIB</span>
-              </div>
-
-            </div>
-          </div>
-
-          <div class='notifications'>
-            <div class='notify-header'>
-              <h2><i class="fa">&#xf233;</i> Server Info</h2>
-              <div class='action-holder'>
-                <i class="fa">&#xf106;</i> <i class="fa">&#xf013;</i>
-              </div>
-            </div>
-
-            <div class='notify-box'>
-              <span>60% / 70°F / 3.3 Ghz</span>
-              <span style='float: right;'>CPU</span>
-              <div class='fluff-grey'>
-                <div class='fluff-blue' style="height:25px;width:60%">
-                </div>
-              </div>
-
-              <span>25% / 4GB / (16GB)</span>
-              <span style='float: right;'>MEM</span>
-              <div class='fluff-grey'>
-                <div class='fluff-blue' style="height:25px;width:25%">
-                </div>
-              </div>
-
-              <span>70% / 100GB / 50GB</span>
-              <span style='float: right;'>BANDWIDTH</span>
-              <div class='fluff-grey'>
-                <div class='fluff-blue' style="height:25px;width:70%">
-                </div>
-              </div>
-
-              <span>10% / 100GB / 1TB</span>
-              <span style='float: right;'>DISC SPACE</span>
-              <div class='fluff-grey'>
-                <div class='fluff-blue' style="height:25px;width:10%">
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class='newest-members'>
-
-          <div style='width: -webkit-fill-available;' class='notifications'>
-            <div class='notify-header'>
-              <h2><i class="fa">&#xf0c0;</i> Newest Members</h2>
-              <div class='action-holder'>
-                <i class="fa">&#xf106;</i> <i class="fa">&#xf013;</i>
-              </div>
-            </div>
-
-            <div class='notify-box'>
-
-              <table id="customers">
-                <tr>
-                  <th>Joined</th>
-                  <th>Username</th>
-                  <th>IP</th>
-                  <th>Banned</th>
-                  <th>Actions</th>
-                </tr>
-                <tr>
-                  <td>1 week ago</td>
-                  <td>FLUFFERS</td>
-                  <td>127.0.0.1</td>
-                  <td>NO</td>
-                  <td>
-                    <a class='actions-btns' href='#'><i class="fa">&#xf040;</i></a>
-                    <a class='actions-btns2' href='#'><i class="fa fa-times"></i></a>
-
-                  </td>
-                </tr>
-
-              </table>
-              <div class='view-all-members'>
-                <span class='view-all-btn1'><a href='#'>View All Members</a></span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class=''>
-
-        </div>
-
-      </section>
-
-    </div>
-
-  </div>
+<!--This section to include js only for this page-->
+@section Scripts{
+    <script></script>
+}
