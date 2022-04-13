@@ -1,180 +1,189 @@
 ﻿<!--This is the homepage-->
+@{
+    ViewData["Title"] = "Homepage";
+}
 
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Hopeuperman Web Tech</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/leaflet.css" />
+    <script src="/leaflet.js"></script>
 
-        .firstsection {
-            background-image: url("https://www.traveldailymedia.com/assets/2021/10/shutterstock_1179100084.jpg");
-            background-color: #ffffff;
-            -webkit-text-fill-color: white;
-            text-shadow: 0 0 5px #000000, 0 0 7px #000000;
-            height: 400px;
-        }
- 
-        .secondsection {
-            background-image: url("https://emma.fashion/wp-content/uploads/2020/06/diversity.jpg");
-            background-position: 35% 30%;
-            background-color: wheat;
-            -webkit-text-fill-color: white;
-            text-shadow: 0 0 5px #000000, 0 0 7px #000000;
-            height: 400px;
-        }
- 
-        .box-main {
+    <style>
+        .sectionContent {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
             max-width: 80%;
             margin: auto;
-            height: 80%;
-        }
- 
-        .firsthalf {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
- 
-        .secondhalf {
-            width: 30%;
-        }
- 
-        .secondhalf img {
-            width: 70%;
-            border: 4px solid white;
-            border-radius: 150px;
-            display: block;
-            margin: auto;
-        }
- 
-        .text-big {
-            font-family: 'Piazzolla', serif;
-            font-weight: bold;
-            font-size: 35px;
-        }
- 
-        .text-small {
-            font-size: 18px;
-        }
- 
-        .section {
-            background-image: url("https://www.ft.com/__origami/service/image/v2/images/raw/https://s3-ap-northeast-1.amazonaws.com/psh-ex-ftnikkei-3937bb4/images/5/8/0/1/28231085-1-eng-GB/RTS3JFYS.JPG?source=nar-cms");
-            height: 400px;
-            display: flex;
-            background-position: 10% 10%;
-            background-size: 1200px 700px;
-            align-items: center;
-            justify-content: center;
-            max-width: 100%;
-            margin: auto;
-            -webkit-text-fill-color: white;
-            text-shadow: 0 0 5px #000000, 0 0 7px #000000;
-        }
- 
-        .section-Left {
-            flex-direction: row-reverse;
-        }
- 
-        .paras {
-            padding: 0px 65px;
-        }
- 
-        .btn {
-             background: #00cdcd;
-             border: none;
-             padding: 15px 32px;
-             text-align: center;
-             text-decoration: white;
-             display: inline-block;
-             font-size: 16px;
-             color: white;
+            height: 500px; 
         }
 
-        .btn:hover {
-             background: #2079b0;
-             background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
-             background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);
-             background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
-             background-image: -o-linear-gradient(top, #2079b0, #eb94d0); 
-             background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
-             text-decoration: none;
+        .mapSectionContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+            height: 1000px;
         }
- 
-        .center {
-            text-align: center;
+
+        .headerText {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 38px;
+        }
+
+        .paragraphText {
+            font-size: 20px;
+        }
+
+        .firstSection {
+            background-image: url("/images/kuching_sarawak.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .secondSection {
+            background-image: url("/images/diversity.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .thirdSection {
+            background-image: url("/images/hotfuzz.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .fourthSection {
+            background-image: url("/images/hackerman.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .mapSection {
+            background-image: url("/images/johncena.png");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        #map {
+            margin-left: auto;
+            margin-right: auto;
+            height: 800px;
+            width: 800px;
         }
     </style>
 </head>
- 
-<body> 
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="firstsec">Sarawak</h1>                      
-                <p class="text-small">
-                    <i>Sarawak, a Malaysian state on Borneo, stretches along
-                    the island's northwest coast, including many beaches
-                    on the South China Sea. It's known for the rugged,
-                    dense rainforest of its interior, much of it protected
-                    parkland. The capital, Kuching, is a bustling city set
-                    on the Sarawak River. It's also known for its rich history.
+
+<body>
+    <section class="firstSection">
+        <div class="sectionContent">
+            <div class="sectionHeader">
+                <h1 class="headerText">
+                    Sarawak
+                </h1>
+                <p class="paragraphText">
+                    <i>
+                        Sarawak, a Malaysian state on Borneo, stretches along
+                        the island's northwest coast, including many beaches
+                        on the South China Sea. It is known for the rugged and
+                        dense rainforest of its interior, much of it protected
+                        parkland. The capital, Kuching, is a bustling city set
+                        on the Sarawak River. Sarawak is also known for its
+                        rich history.
                     </i>
                 </p>
- 
- 
             </div>
         </div>
     </section>
- 
-    <section class="secondsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="secondsec">
+
+    <section class="secondSection">
+        <div class="sectionContent">
+            <div class="sectionHeader">
+                <h1 class="headerText" ">
                     Ethnic Diversity
                 </h1>
-                <p class="text-small">
-                    <i>The population in Sarawak is very diverse. Even though
-                    the ethnic group in Sarawak is Dayak, then Malay,
-                    and then Chinese, there are more than 40 of them with
-                    their own distinct languages, cultures, and lifestyle.
+                <p class="paragraphText">
+                    <i>
+                        The population of Sarawak is very diverse. There are more
+                        than 40 races in Sarawak including Dayak, Malay, Chinese,
+                        and others with their own distinct languages, cultures,
+                        and lifestyle.
                     </i>
                 </p>
- 
- 
             </div>
         </div>
     </section>
- 
-    <section class="section">
-        <div class="paras">
-            <h1 class="sectionTag text-big">What is this website?</h1>
- 
-            <p class="sectionSubTag text-small">
-                <i>This website is created for local language studies in Sarawak.
-                More specifically, dialects. We use openstreetmaps to provide
-                an interactive map for users to interact and learn about the
-                the dialects in Sarawak and where they came from and/or where
-                they originated.</i>
-                <br /><br />
-                Want to learn more? Click the button to navigate to the
-                interactive map page.
-            </p>
-        </div>
 
-        <div class="btn">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="InteractiveMap">Interactive Map</a>
+    <section class="thirdSection">
+        <div class="sectionContent">
+            <div class="sectionHeader">
+                <h1 class="headerText" ">
+                    Dialect
+                </h1>
+                <p class="paragraphText">
+                    <i>
+                        Defined as a regional or social variety of language
+                        distinguished by pronunciation, grammar, or vocabulary,
+                        especially a variety of speech differing from the standard
+                        literary language or speech pattern of the culture in which
+                        it exists.
+                    </i>
+                </p>
+            </div>
         </div>
     </section>
 
+    <section class="fourthSection">
+        <div class="sectionContent">
+            <div class="sectionHeader">
+                <h1 class="headerText" ">
+                    Why is this website and why it exists?
+                </h1>
+                <p class="paragraphText">
+                    <i>
+                        This website is created for Sarawak local language studies,
+                        more specifically, dialects. We use openstreetmap to provide
+                        an interactive map for users to interact and learn more about
+                        the unique dialects in Sarawak and the location of where they
+                        are spoken.<br> As for why it exists, I don't know. Why do you
+                        exist? Why do any of us exist? Is there a higher reason for our
+                        existence that is not because of our parents got too horny and
+                        forgot condom?
+                    </i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapSection">
+        <div class="mapSectionContent">
+            <div class="sectionHeader">
+                <h1 class="headerText">
+                    Interactive Map
+                </h1>
+                <p class="paragraphText">
+                    <i>
+                        You can interact with the map below. If you do not know how to
+                        interact with it, you can go up to the navigation bar and click
+                        on <b>Tutorial</b> to learn more about it.
+                    </i>
+                </p>
+
+                <div id="map"></div>
+                <script>
+                    var map = L.map('map').setView([2.3412195, 111.8418392], 18); //coordinates and zoom level
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                </script>
+            </div>
+        </div>
+    </section>
+
+
 </body>
- 
 </html>

@@ -7,19 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Content\**" />
     <Compile Remove="NewFolder\**" />
+    <Content Remove="Content\**" />
     <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="Content\**" />
     <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="Content\**" />
     <None Remove="NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\images\celebrate-banner-min.jpg" />
     <None Include="wwwroot\images\Hopeuperman.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Content\Images\" />
   </ItemGroup>
 
 </Project>
