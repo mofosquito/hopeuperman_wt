@@ -1,24 +1,71 @@
 ﻿<!--This page is for terms of service-->
-
 @{
     ViewData["Title"] = "Terms of Service";
 }
 
-<div class="container">
-    <h1>@ViewData["Title"]</h1>
+<html>
+<head>
+</head>
 
-    <p><br />Yada yada yada</p>
+<body>
+    <div class="container">
+        <h1>@ViewData["Title"]</h1>
 
-    <p><b>Winston Churchill said</b></p>
+        <p>
+            The simple narrative taught in every history class
+            is demonstrably false and pedagogically classist.
+            Don't you know? The world is build with blood! And
+            genocide! And exploitation!<br /><br />
+            From here on, "we" and us" will be referred to the
+            authors of the website; "you" will be referred to
+            the user that is using the services provided by the
+            website.
+        </p>
 
-    <p>A criticism may not be agreeable, but it is necessary. It calls attention to the unhealthy state of things. And the state of everything in this country, is most certainly unhealthy.</p>
+        <ol>
+            <li>
+                <b><u>Privacy</u></b>
 
-    <p><b>Nothing really matters, we're all gonna die.</b></p>
+                <p>
+                    Your privacy matters to us. It is a fundamental human
+                    right. Our <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                    explains how and why we collect and use the information
+                    about you when you access our website. By continue using
+                    our website, you consent to the collection and usage of
+                    your information as set forth in the <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.
+                </p>
+            </li>
 
-    <p>We were born without any purpose,we will die without any purpose. Survival without reason.</p>
+            <li>
+                <b><u>Things You Cannot Do</u></b>
+                <p>
+                    <ul>
+                        <li>
+                            <h5>Duplication of Our Website</h5>
+                            <p>
+                                This project is open source and under <a href="/txts/COPYING.txt">GNU General Public License v3.0</a>.
+                                You may copy, modify, or distribute this project verbatim, <b>EXCEPT</b> distributing
+                                close sourced versions.
+                            </p>
+                        </li>
+                        <li>
+                            <h5>Hacking Our Website</h5>
+                            <p>Please. Don't.</p>
+                        </li>
+                    </ul>
+                </p>
+            </li>
 
-    <p><b>MAYBE I SHOULD SLEEP FIRST</b></p>
-
-    <p>Note to self: Never drink 7 cups of coffee in a day.</p>
-</div>
-
+            <li>
+                <b><u>IP Block</u></b>
+                <p>
+                    If we noticed any strange activity originate from your IP address,
+                    we reserve the right to block your IP address from accessing our
+                    website. If you have any questions or concerns, please contact the
+                    <a asp-area="" asp-controller="Home" asp-action="AboutUs">authors</a> of this website.
+                </p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

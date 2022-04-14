@@ -1,1 +1,152 @@
-<!--This page is for additional information-->
+<!--This page is for authors information-->
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<html>
+<head>
+    <style>
+        .sectionContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+            height: 500px; 
+        }
+
+        .mainText {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 38px;
+        }
+
+        .headerText {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .paragraphText {
+            font-size: 20px;
+        }
+
+        .firstSection {
+            background-image: url("/images/peace.jpg");
+            background-position: center;
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .secondSection {
+            background-image: url("/images/quinn.png");
+            background-position: center;
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .thirdSection {
+            background-image: url("/images/rick.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+
+        .fourthSection {
+            background-image: url("/images/daryl.jpg");
+            -webkit-text-fill-color: white;
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+        }
+    </style>
+
+</head>
+<body>
+    <section class=firstSection>
+        <div class=sectionContent>
+            <div class=sectionHeader>
+                <h1 class="mainText">The authors of the website:</h1>
+                <p>
+                    <ul>
+                        <li>Adrian Lau</li>
+                        <li>Abdullah Al-Hisyam</li>
+                        <li>Daryl Kardil Kelebit</li>
+                    </ul>
+                </p>
+                <h1 class="mainText">With special thanks to:</h1>
+                <p>
+                    <ul>
+                        <li>Mr Jackie Ting</li>
+                        <li>Mr Sia Yuk Heng</li>
+                        <li>My imaginary friends that kept me from going insane</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secondSection">
+        <div class=sectionContent>
+            <div class=sectionHeader>
+                <h2 class="headerText">Adrian Lau</h2>
+                <p>
+                    A computer science student, wanted to commit suicide
+                    multiple times but was too coward to actually do it
+                    so this person is currently struggling to survive one
+                    day at a time.
+                </p>
+                <p>
+                    <ul class="noBullets">
+                        <li>Email: bcs20020008@student.uts.edu.my</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="thirdSection">
+        <div class=sectionContent>
+            <div class=sectionHeader>
+                <h2 class="headerText">Abdullah Al-Hisyam</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    <ul class="noBullets">
+                        <li>Email: bcs20020006@student.uts.edu.my</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="fourthSection">
+        <div class=sectionContent>
+            <div class=sectionHeader>
+                <h2 class="headerText">Daryl Kardil Kelebit</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    <ul class="noBullets">
+                        <li>Email: bcs20090010@student.uts.edu.my</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

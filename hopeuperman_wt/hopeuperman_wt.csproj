@@ -18,8 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\images\celebrate-banner-min.jpg" />
-    <None Include="wwwroot\images\Hopeuperman.png" />
+    <Content Update="Views\Home\Tutor.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

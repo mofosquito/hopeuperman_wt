@@ -17,4 +17,11 @@ html {
 
 body {
     margin-bottom: 60px;
+    padding-top: 100px;
+}
+
+ul.noBullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

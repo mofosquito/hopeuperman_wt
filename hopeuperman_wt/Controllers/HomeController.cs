@@ -23,7 +23,12 @@ namespace hopeuperman_wt.Controllers
             return View();
         }
 
-        public IActionResult InteractiveMap()
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Tutorial()
         {
             return View();
         }
