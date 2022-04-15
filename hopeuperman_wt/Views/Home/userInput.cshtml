@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Provide Content";
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <section>
+        <div class="container">
+            <form action="userInputResults.cshtml" method="GET" enctype="multipart/form-data" id=form> @*Action attribute have to be php I think*@
+
+            <label>Your name (Optional):</label><br>
+            <input type="text" name="username" size="50" /> <br><br>
+
+            <label>Your email:</label><br>
+            <input type="email" name="email" size="50" oninvalid="this.setCustomValidity('Please enter valid email.')"/> <br><br>
+
+            <label>Location of interest (Best with coordinates):</label><br>
+            <input type="text" name="location" size="50" oninvalid="this.setCustomValidity('Please enter something.')"/> <br><br>
+
+            <label>Audio file (Optional):</label><br>
+            <input type="file" name="thefile">
+             <!-- test key -->
+             <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div> @*Data site key is prolly php related?*@
+
+            <label>Details:</label><br>
+            <textarea rows="5" cols="80" name="suggestion"></textarea> <br><br>
+
+            <button type="submit" class="SubmitButton" onclick="submitButton()">Submit</button>
+
+            <!--Form result-->
+            <script src="/js/userInput.js"></script>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

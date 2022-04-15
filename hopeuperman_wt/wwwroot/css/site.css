@@ -25,3 +25,9 @@ ul.noBullets {
     margin: 0;
     padding: 0;
 }
+
+ol.noBullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

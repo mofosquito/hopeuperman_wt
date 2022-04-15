@@ -19,13 +19,72 @@
     </style>
 </head>
 <body>
-    <div id="map"></div>
-    <script>
-        var map = L.map('map').setView([2.3412195, 111.8418392], 18); //coordinates and zoom level
+    <div class="container">
+        <h1>@ViewData["Title"]</h1>
+        <p>
+            This step-by-step guide will help you learn the basic interactions
+            with the integrated openstreetmap without sending any content to
+            our weak-ass server.
+        </p>
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    </script>
+        <ol class="noBullets">
+            <li>
+                <b>Step 1</b>
+                <p>Zoom out of the map and find an icon.</p>
+            </li>
+            <li>
+                <b>Step 2</b>
+                <p>
+                    Locate a marker and zoom in on that location. The marker should
+                    look like this <img src="/images/marker-icon.png" />
+                </p>
+            </li>
+            <li>
+                <b>Step 3</b>
+                <p>
+                    Hover your cursor on the marker. You will see a box of
+                    information pop up.
+                </p>
+            </li>
+            <li>
+                <b>Step 4</b>
+                <p>
+                    You can read the information regarding the dialect in the rough
+                    estimate of the region.
+                </p>
+            </li>
+            <li>
+                <b>Step 5</b>
+                <p>
+                    To listen to the sample audio of the dialect, click on the cursor
+                    and it will direct you to the audio page.
+                </p>
+            </li>
+            <li>
+                <b>Step 6</b>
+                <p>
+                    After you have finished, click on the "x" button or the outside
+                    of the cursor and the box of information to close the box.
+                </p>
+            </li>
+            <li>
+                <b>Optional Step</b>
+                <p>
+                    If you wish to provide information about a certain area regarding
+                    the dialect spoken in that certain area, please contact us
+                    <a asp-area="" asp-controller="Home" asp-action="userInput">here</a>.
+                    We will review it and if approved, we will add it into our map to
+                    provide more content to the public. Thank you.
+                </p>
+            </li>
+        </ol>
+
+        <div class=container>
+            <h3 style="text-align:center">Interact with the map here:</h3>
+            <div id="map"></div>
+            <script src="/js/tutorialMapScript.js"></script>
+        </div>
+        
+    </div>
 </body>
 </html>
