@@ -1,8 +1,8 @@
-﻿using hopeuperman_wt.Models;
+﻿using hopeuperman_adminPanel.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace hopeuperman_wt.Controllers
+namespace hopeuperman_adminPanel.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,36 +17,8 @@ namespace hopeuperman_wt.Controllers
         {
             return View();
         }
+
         public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        public IActionResult AboutUs()
-        {
-            return View();
-        }
-
-        public IActionResult Tutorial()
-        {
-            return View();
-        }
-
-        public IActionResult ToS()
-        {
-            return View();
-        }
-
-        public IActionResult UserAccount()
-        {
-            return View();
-        }
-
-        public IActionResult userInput()
-        {
-            return View();
-        }
-        public IActionResult Dialeclopedia()
         {
             return View();
         }
