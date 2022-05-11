@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="91d0bfb8-9de2-4add-96b0-f048cefe099f" ChangeDateTime="05/11/2022 15:05:24">
+    <Property Name="ElementName" Value="[dbo].[Marker].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Marker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a4ea1be9-0651-48b1-946c-b43983146202" ChangeDateTime="05/11/2022 15:05:33">
+    <Property Name="ElementName" Value="[dbo].[Marker].[Longitude]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Marker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="long" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cf5ef122-fcca-4e2d-a821-84e7f22b34fd" ChangeDateTime="05/11/2022 15:05:36">
+    <Property Name="ElementName" Value="[dbo].[Marker].[Latitude]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Marker]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="lat" />
+  </Operation>
+</Operations>

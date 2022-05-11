@@ -59,6 +59,10 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Marker.sql" />
+    <Build Include="Tables\pins.sql" />
+    <Build Include="Tables\userInfo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="hopeuperman_db.refactorlog" />
   </ItemGroup>
 </Project>
