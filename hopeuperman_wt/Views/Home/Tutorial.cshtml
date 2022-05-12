@@ -1,4 +1,4 @@
-﻿<!--This page is for terms of service-->
+﻿<!--This page is for Tutorial-->
 @{
     ViewData["Title"] = "Tutorial";
 }
@@ -7,24 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/site.css" />
-    <link rel="stylesheet" href="/leaflet.css" />
-    <script src="/leaflet.js"></script>
-    <style>
-        #map {
-            margin-left: auto;
-            margin-right: auto;
-            height: 800px;
-            width: 800px;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>@ViewData["Title"]</h1>
+        <h1 style=text-align:center;>@ViewData["Title"]</h1><br />
         <p>
             This step-by-step guide will help you learn the basic interactions
-            with the integrated openstreetmap without sending any content to
-            our weak-ass server.
+            with the integrated openstreetmap.
         </p>
 
         <ol class="noBullets">
@@ -86,13 +75,6 @@
                 </p>
             </li>
         </ol>
-
-        <div class=container>
-            <h3 style="text-align:center">Interact with the map here:</h3>
-            <div id="map"></div>
-            <script src="/js/tutorialMapScript.js"></script>
-        </div>
-        
     </div>
 </body>
 </html>

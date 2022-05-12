@@ -17,12 +17,8 @@ namespace hopeuperman_wt.Controllers
         {
             return View();
         }
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        public IActionResult AboutUs()
+        public IActionResult More()
         {
             return View();
         }
@@ -31,8 +27,7 @@ namespace hopeuperman_wt.Controllers
         {
             return View();
         }
-
-        public IActionResult ToS()
+        public IActionResult InteractiveMap()
         {
             return View();
         }
@@ -47,6 +42,10 @@ namespace hopeuperman_wt.Controllers
             return View();
         }
         public IActionResult Dialeclopedia()
+        {
+            return View();
+        }
+        public IActionResult Policies()
         {
             return View();
         }

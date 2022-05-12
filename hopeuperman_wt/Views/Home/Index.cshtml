@@ -7,8 +7,6 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/site.css" />
-    <link rel="stylesheet" href="/leaflet.css" />
-    <script src="/leaflet.js"></script>
 
     <style>
         .sectionContent {
@@ -18,15 +16,6 @@
             max-width: 80%;
             margin: auto;
             height: 500px;
-        }
-
-        .mapSectionContent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 80%;
-            margin: auto;
-            height: 1000px;
         }
 
         .headerText {
@@ -63,17 +52,10 @@
             text-shadow: 0 0 5px #000000, 0 0 10px #000000;
         }
 
-        .mapSection {
+        .fifthSection {
             background-image: url("/images/johncena.png");
             -webkit-text-fill-color: white;
             text-shadow: 0 0 5px #000000, 0 0 10px #000000;
-        }
-
-        #map {
-            margin-left: auto;
-            margin-right: auto;
-            height: 800px;
-            width: 800px;
         }
     </style>
 </head>
@@ -103,7 +85,7 @@
     <section class="secondSection">
         <div class="sectionContent">
             <div class="sectionHeader">
-                <h1 class="headerText" ">
+                <h1 class="headerText">
                     Ethnic Diversity
                 </h1>
                 <p class="paragraphText">
@@ -121,7 +103,7 @@
     <section class="thirdSection">
         <div class="sectionContent">
             <div class="sectionHeader">
-                <h1 class="headerText" ">
+                <h1 class="headerText">
                     Dialect
                 </h1>
                 <p class="paragraphText">
@@ -140,7 +122,7 @@
     <section class="fourthSection">
         <div class="sectionContent">
             <div class="sectionHeader">
-                <h1 class="headerText" ">
+                <h1 class="headerText">
                     Why is this website and why it exists?
                 </h1>
                 <p class="paragraphText">
@@ -159,17 +141,23 @@
         </div>
     </section>
 
-    <section class="mapSection">
-        <div class="mapSectionContent">
+    <section class="fifthSection">
+        <div class="sectionContent">
             <div class="sectionHeader">
                 <h1 class="headerText">
                     Interactive Map
                 </h1>
                 <p class="paragraphText">
                     <i>
-                        You can interact with the map below. If you do not know how to
+                        You can interact with the map by going up to the navigation bar and click
+                        on <b>Interactive Map</b> or by clicking
+                        <a asp-controller="Home" asp-action="InteractiveMap">here</a>.
+                        <br />
+                        If you do not know how to
                         interact with it, you can go up to the navigation bar and click
-                        on <b>Tutorial</b> to learn more about it.
+                        on <b>Tutorial</b> or click
+                        <a asp-controller="Home" asp-action="Tutorial">here</a>
+                        to learn more about it.
                     </i>
                 </p>
 
