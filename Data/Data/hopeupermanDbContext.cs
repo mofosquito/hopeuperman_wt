@@ -26,7 +26,7 @@ namespace Data.Data
         {
             if(!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server = tcp:hopeuperman.database.windows.net, 1433; Initial Catalog = hopeupermanDb; Persist Security Info = False; User ID = hopeuperman; Password =Nothingreallymatters5616; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
+                optionsBuilder.UseSqlServer("Server = tcp:hopeuperman.database.windows.net, 1433; Initial Catalog = hopeupermanDb; Persist Security Info = False; User ID = hopeuperman; Password=Superman911; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
             }
         }
 
