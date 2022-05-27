@@ -7,14 +7,16 @@ namespace hopeuperman_wt.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly hopeuperman_db_context database;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, hopeuperman_db_context database)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
+            var items = database.MapMarkers.ToList();
             return View();
         }
 

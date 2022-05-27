@@ -1,0 +1,60 @@
+﻿@model Data.Models.MapMarkers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MapMarkers</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MainLangauge)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MainLangauge)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dialect)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dialect)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AudioFile)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AudioFile)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tag)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Admin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Admin.AdminId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MarkerId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

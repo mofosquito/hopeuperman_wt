@@ -1,4 +1,5 @@
-﻿using hopeuperman_adminPanel.Models;
+﻿using Data.Data;
+using hopeuperman_adminPanel.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,7 +9,7 @@ namespace hopeuperman_adminPanel.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, hopeupermanDbContext database)
         {
             _logger = logger;
         }

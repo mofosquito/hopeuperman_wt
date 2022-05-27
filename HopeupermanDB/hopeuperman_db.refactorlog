@@ -21,4 +21,53 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="lat" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d3402c75-1156-4a7a-88b3-3eddc11090bc" ChangeDateTime="05/23/2022 15:57:17">
+    <Property Name="ElementName" Value="[dbo].[mapMarkers].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[mapMarkers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="markerID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5b5322d2-96f0-422f-b680-274fc23a741c" ChangeDateTime="05/23/2022 15:57:48">
+    <Property Name="ElementName" Value="[dbo].[mapMarkers].[dialect]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[mapMarkers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="mainLangauge" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2eb9f14a-8166-4da0-97ff-8fdb863a292b" ChangeDateTime="05/23/2022 16:01:54">
+    <Property Name="ElementName" Value="[dbo].[adminData].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[adminData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="adminID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fab2bc2e-64bf-4c4d-92a5-085fa33d0635" ChangeDateTime="05/23/2022 16:03:21">
+    <Property Name="ElementName" Value="[dbo].[adminData].[adminRole]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[adminData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="adminEmail" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9a0e63bb-b9f5-4f3d-b1f3-63f60d26df45" ChangeDateTime="05/23/2022 16:08:01">
+    <Property Name="ElementName" Value="[dbo].[mapMarkers].[tags]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[mapMarkers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="tag" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="af1332ce-76c8-4309-ac17-a32fb9d3e17a" ChangeDateTime="05/27/2022 01:42:58">
+    <Property Name="ElementName" Value="[dbo].[mapMarkers].[markerID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[mapMarkers]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="markerId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="099f155b-06d1-45e1-8b3d-251beedd7f0a" ChangeDateTime="05/27/2022 01:43:58">
+    <Property Name="ElementName" Value="[dbo].[adminData].[adminID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[adminData]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="adminId" />
+  </Operation>
 </Operations>
