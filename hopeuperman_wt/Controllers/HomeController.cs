@@ -1,4 +1,5 @@
-﻿using hopeuperman_wt.Models;
+﻿using Data.Data;
+using hopeuperman_wt.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,16 +8,16 @@ namespace hopeuperman_wt.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly hopeuperman_db_context database;
+        private readonly hopeupermanDbContext database;
 
-        public HomeController(ILogger<HomeController> logger, hopeuperman_db_context database)
+        public HomeController(ILogger<HomeController> logger, hopeupermanDbContext database)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            var items = database.MapMarkers.ToList();
+            //var items = database.MapMarkers.ToList();
             return View();
         }
 

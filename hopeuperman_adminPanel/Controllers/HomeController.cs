@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace hopeuperman_adminPanel.Controllers
 {
+    //[Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

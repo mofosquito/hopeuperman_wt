@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Data.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Data.Data
 {
-    public partial class hopeupermanDbContext : DbContext
+    public partial class hopeupermanDbContext : IdentityDbContext<IdentityUser>
     {
         public hopeupermanDbContext()
         {
@@ -24,7 +26,7 @@ namespace Data.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if(!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer("Server = tcp:hopeuperman.database.windows.net, 1433; Initial Catalog = hopeupermanDb; Persist Security Info = False; User ID = hopeuperman; Password=Superman911; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
             }
@@ -32,6 +34,10 @@ namespace Data.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=EFSample.Database;Integrated Security=true");
+
             modelBuilder.Entity<AdminData>(entity =>
             {
                 entity.HasKey(e => e.AdminId)
