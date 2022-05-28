@@ -1,9 +1,3 @@
-# AT THIS TIME THIS REPOSITORY IS NOT PUBLIC YET FOR 2 REASONS:
-<ol>
-  <li>This project is not yet finished</li>
-  <li>The database which is intended to store informations including username and password hashes of admins and users is included in this repository, if made public it could lead to undesirable outcomes, therefore at this point, this repository should be private, however upon the completion of this project, the database repository will be added into the .gitignore, and then the entire repository will be made public except for the database directory</li>
-</ol>
-
 ## AUTHORS
 <ul>
   <li>Adrian (mofosquito)</li>
