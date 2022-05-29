@@ -30,13 +30,9 @@ namespace Data.Migrations
                     b.Property<int>("AdminId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("adminId");
+                        .HasColumnName("adminId"); 
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"), 1L, 1);
-
-                    b.Property<DateTime>("AddedDate")
-                        .HasColumnType("datetime")
-                        .HasColumnName("addedDate");
 
                     b.Property<string>("AdminEmail")
                         .HasMaxLength(50)
@@ -71,19 +67,23 @@ namespace Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MarkerId"), 1L, 1);
 
-                    b.Property<int?>("AdminId")
+                    b.Property<int?>("AddedbyAdmin")
                         .HasColumnType("int")
-                        .HasColumnName("adminId");
+                        .HasColumnName("AddedbyAdmin");
 
                     b.Property<Guid?>("AudioFile")
-                        .HasColumnType("uniqueidentifier")
+                        .HasColumnType("varchar(max)")
                         .HasColumnName("audioFile");
+
+                    b.Property<Guid?>("Translation")
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("Translation");
 
                     b.Property<string>("Dialect")
                         .IsRequired()
                         .HasMaxLength(50)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
+                        .HasColumnType("varchar(max)")
                         .HasColumnName("dialect");
 
                     b.Property<double>("Latitude")
@@ -110,7 +110,7 @@ namespace Data.Migrations
                     b.HasKey("MarkerId")
                         .HasName("PK__mapMarke__EB045FE862289C69");
 
-                    b.HasIndex(new[] { "AdminId" }, "IX_mapMarkers_adminId");
+                    b.HasIndex(new[] { "addedbyAdmin" }, "IX_mapMarkers_addedbyAdmin");
 
                     b.ToTable("mapMarkers", (string)null);
                 });
@@ -317,7 +317,7 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Models.AdminData", "Admin")
                         .WithMany("MapMarkers")
-                        .HasForeignKey("AdminId")
+                        .HasForeignKey("AddedbyAdmin")
                         .HasConstraintName("FK_mapMarkers_ToTable");
 
                     b.Navigation("Admin");

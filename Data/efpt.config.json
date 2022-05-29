@@ -22,7 +22,7 @@
          "ObjectType": 0
       }
    ],
-   "UiHint": "hopeuperman.hopeupermanDb",
+   "UiHint": "..\\HopeupermanDB\\hopeuperman_db.sqlproj",
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDbContextSplitting": false,

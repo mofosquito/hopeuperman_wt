@@ -9,7 +9,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "hopeuperman_db", "Hopeuperm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hopeuperman_adminPanel", "hopeuperman_adminPanel\hopeuperman_adminPanel.csproj", "{50375976-7B85-462E-BE9B-9395346E0451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{29264D8F-50ED-4050-83B1-78DB31E2CB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{29264D8F-50ED-4050-83B1-78DB31E2CB9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -23,6 +23,11 @@
                 <span asp-validation-for="Latitude" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="LocationName" class="control-label"></label>
+                <input asp-for="LocationName" class="form-control" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="MainLangauge" class="control-label"></label>
                 <input asp-for="MainLangauge" class="form-control" />
                 <span asp-validation-for="MainLangauge" class="text-danger"></span>
@@ -38,13 +43,18 @@
                 <span asp-validation-for="AudioFile" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Translation" class="control-label"></label>
+                <input asp-for="Translation" class="form-control" />
+                <span asp-validation-for="Translation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Tag" class="control-label"></label>
                 <input asp-for="Tag" class="form-control" />
                 <span asp-validation-for="Tag" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AdminId" class="control-label"></label>
-                <select asp-for="AdminId" class ="form-control" asp-items="ViewBag.AdminId"></select>
+                <label asp-for="AddedbyAdmin" class="control-label"></label>
+                <select asp-for="AddedbyAdmin" class ="form-control" asp-items="ViewBag.AddedbyAdmin"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

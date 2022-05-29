@@ -8,13 +8,15 @@ namespace Data.Models
     public partial class MapMarkers
     {
         public int MarkerId { get; set; }
-        public double Longitude { get; set; }
-        public double Latitude { get; set; }
+        public double? Longitude { get; set; }
+        public double? Latitude { get; set; }
+        public string LocationName { get; set; }
         public string MainLangauge { get; set; }
         public string Dialect { get; set; }
-        public Guid? AudioFile { get; set; }
+        public string AudioFile { get; set; }
+        public string Translation { get; set; }
         public string Tag { get; set; }
-        public int? AdminId { get; set; }
+        public int? AddedbyAdmin { get; set; }
 
         public virtual AdminData Admin { get; set; }
     }

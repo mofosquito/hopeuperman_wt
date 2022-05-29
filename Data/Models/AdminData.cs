@@ -16,7 +16,6 @@ namespace Data.Models
         public string AdminUsername { get; set; }
         public string AdminPassword { get; set; }
         public string AdminEmail { get; set; }
-        public DateTime AddedDate { get; set; }
 
         public virtual ICollection<MapMarkers> MapMarkers { get; set; }
     }

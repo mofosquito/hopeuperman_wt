@@ -32,10 +32,6 @@ namespace Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"), 1L, 1);
 
-                    b.Property<DateTime>("AddedDate")
-                        .HasColumnType("datetime")
-                        .HasColumnName("addedDate");
-
                     b.Property<string>("AdminEmail")
                         .HasMaxLength(50)
                         .IsUnicode(false)
@@ -76,6 +72,10 @@ namespace Data.Migrations
                     b.Property<Guid?>("AudioFile")
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("audioFile");
+
+                    b.Property<Guid?>("Translation")
+                        .HasColumnType("varchar(max)")
+                        .HasColumnName("translation");
 
                     b.Property<string>("Dialect")
                         .IsRequired()

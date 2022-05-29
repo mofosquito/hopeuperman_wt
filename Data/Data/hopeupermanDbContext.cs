@@ -20,7 +20,7 @@ namespace Data.Data
             : base(options)
         {
         }
-
+       
         public virtual DbSet<AdminData> AdminData { get; set; }
         public virtual DbSet<MapMarkers> MapMarkers { get; set; }
 
@@ -31,37 +31,33 @@ namespace Data.Data
                 optionsBuilder.UseSqlServer("Server = tcp:hopeuperman.database.windows.net, 1433; Initial Catalog = hopeupermanDb; Persist Security Info = False; User ID = hopeuperman; Password=Superman911; MultipleActiveResultSets = False; Encrypt = True; TrustServerCertificate = False; Connection Timeout = 30;");
             }
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             base.OnModelCreating(modelBuilder);
-            modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=EFSample.Database;Integrated Security=true");
+            modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=hopeuperman_db;Integrated Security=true");
 
             modelBuilder.Entity<AdminData>(entity =>
             {
-                entity.HasKey(e => e.AdminId)
-                    .HasName("PK__adminDat__AD0500A6DFA50520");
+                entity.HasKey(e => e.AdminId);
 
                 entity.ToTable("adminData");
 
                 entity.Property(e => e.AdminId).HasColumnName("adminId");
 
-                entity.Property(e => e.AddedDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("addedDate");
-
                 entity.Property(e => e.AdminEmail)
+                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("adminEmail");
 
                 entity.Property(e => e.AdminPassword)
+                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("adminPassword");
 
                 entity.Property(e => e.AdminUsername)
+                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("adminUsername");
@@ -69,43 +65,48 @@ namespace Data.Data
 
             modelBuilder.Entity<MapMarkers>(entity =>
             {
-                entity.HasKey(e => e.MarkerId)
-                    .HasName("PK__mapMarke__EB045FE862289C69");
+                entity.HasKey(e => e.MarkerId);
 
                 entity.ToTable("mapMarkers");
 
-                entity.HasIndex(e => e.AdminId, "IX_mapMarkers_adminId");
+                entity.HasIndex(e => e.AddedbyAdmin, "IX_mapMarkers_addedbyAdmin");
 
                 entity.Property(e => e.MarkerId).HasColumnName("markerId");
 
-                entity.Property(e => e.AdminId).HasColumnName("adminId");
+                entity.Property(e => e.AddedbyAdmin).HasColumnName("addedbyAdmin");
 
-                entity.Property(e => e.AudioFile).HasColumnName("audioFile");
+                entity.Property(e => e.Translation)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("translation");
 
                 entity.Property(e => e.Dialect)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("dialect");
 
                 entity.Property(e => e.Latitude).HasColumnName("latitude");
 
+                entity.Property(e => e.LocationName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("locationName");
+
                 entity.Property(e => e.Longitude).HasColumnName("longitude");
 
                 entity.Property(e => e.MainLangauge)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("mainLangauge");
 
                 entity.Property(e => e.Tag)
-                    .HasMaxLength(10)
-                    .HasColumnName("tag")
-                    .IsFixedLength();
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("tag");
 
                 entity.HasOne(d => d.Admin)
                     .WithMany(p => p.MapMarkers)
-                    .HasForeignKey(d => d.AdminId)
+                    .HasForeignKey(d => d.AddedbyAdmin)
                     .HasConstraintName("FK_mapMarkers_ToTable");
             });
 

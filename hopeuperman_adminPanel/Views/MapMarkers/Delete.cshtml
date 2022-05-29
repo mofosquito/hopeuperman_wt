@@ -24,6 +24,12 @@
             @Html.DisplayFor(model => model.Latitude)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LocationName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LocationName)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.MainLangauge)
         </dt>
         <dd class = "col-sm-10">
@@ -42,6 +48,12 @@
             @Html.DisplayFor(model => model.AudioFile)
         </dd>
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Translation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Translation)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Tag)
         </dt>
         <dd class = "col-sm-10">
@@ -51,7 +63,7 @@
             @Html.DisplayNameFor(model => model.Admin)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Admin.AdminId)
+            @Html.DisplayFor(model => model.Admin.AdminId) @*Why is this*@
         </dd>
     </dl>
     

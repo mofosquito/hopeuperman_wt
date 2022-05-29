@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MarkerId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Longitude)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MainLangauge)
@@ -31,10 +31,13 @@
                 @Html.DisplayNameFor(model => model.AudioFile)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Translation)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Tag)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AdminId)
+                @Html.DisplayNameFor(model => model.Admin) @*Why is this*@
             </th>
             <th></th>
         </tr>
@@ -49,6 +52,9 @@
                 @Html.DisplayFor(modelItem => item.Latitude)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.LocationName)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.MainLangauge)
             </td>
             <td>
@@ -58,10 +64,13 @@
                 @Html.DisplayFor(modelItem => item.AudioFile)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Translation)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Tag)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Admin.AdminId)
+                @Html.DisplayFor(modelItem => item.Admin.AdminId) @*Why is this*@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MarkerId">Edit</a> |
