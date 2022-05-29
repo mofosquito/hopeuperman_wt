@@ -1,4 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//Dear anyone who sees this
+//When I was doing this project
+//only God and I knew how it worked.
+//Now, only God knows it.
+
+//Therefore, if you are trying to
+//understand it and/or modify it
+//then when it fails, please
+//increase this counter for the
+//next unlucky soul:
+
+//total_hours_wasted_here = 576
+
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Data.Data;
 
