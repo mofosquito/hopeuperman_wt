@@ -68,16 +68,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 $.ajax({
     type: "GET",
-    url: '' + window.location.origin + '/Markers/GetLocation',
+    url: '' + window.location.origin + '/mapMarkers/GetLocation',
     success: function (data) {
         for (var i = 0; i < data.length; ++i) {
             var popup = '<b>Location Name:</b> ' + data[i].locationName +
                 '<br/><b>Longitude:</b> ' + data[i].longitude +
                 '<br/><b>Latitude:</b> ' + data[i].latitude +
-                '<br/><b>Main Language:</b> ' + data[i].mainLanguage +
+                '<br/><b>Main Language:</b> ' + data[i].mainLangauge +
                 '<br/><b>Dialect:</b> ' + data[i].dialect +
                 '<br/><b>Audio:</b> ' + data[i].audioFile +
-                '<br/><b>Translation:</b> ' + data[i].Translation +
+                '<br/><b>Translation:</b> ' + data[i].translation +
                 '<br/><b>Tag:</b> ' + data[i].tag;
 
 

@@ -36,8 +36,12 @@ namespace hopeuperman_web.Controllers
                         Longitude = p.Longitude,
                         Latitude = p.Latitude,
                         LocationName = p.LocationName,
+                        MainLangauge = p.MainLangauge,
+                        Dialect = p.Dialect,
+                        AudioFile = p.AudioFile,
+                        Translation = p.Translation,
                         Tag = p.Tag,
-                        AddedbyAdmin = p.AddedbyAdmin,
+                        AddedbyAdmin = p.AddedbyAdmin,                        
                     }).ToList();
         }
         #endregion
