@@ -13,6 +13,19 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Admin Panel - Hopeuperman</title>
+    <style>
+        .body {
+        }
+
+        .sectionHeader {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 38px;
+            color: black;
+            /*text-decoration: none;*/
+        }
+
+    </style>
 </head>
 <body>
     <nav>
@@ -25,38 +38,16 @@
         <div class="menu-items">
             <ul class="nav-links">
                 <li>
-                    <a href="#">
+                    <a href="#Statistics">
                         <i class="uil uil-estate"></i>
-                        <span class="link-name">Dashboard</span>
+                        <span class="link-name">Statistics</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#location">
+                    <a href="#MapTable">
                         <i class="uil uil-files-landscapes"></i>
-                        <span class="link-name">Map Content</span>
+                        <span class="link-name">Map Table</span>
                     </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="uil uil-chart"></i>
-                        <span class="link-name">Admin Table</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="uil uil-thumbs-up"></i>
-                        <span class="link-name">Audio Files</span>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="logout-mode">
-                <li>
-                    <a href="#">
-                        <i class="uil uil-signout"></i>
-                        <span class="link-name">Logout</span>
-                    </a>
-
                 </li>
             </ul>
         </div>
@@ -74,11 +65,10 @@
             @*<img src="images/profile.jpg">*@
         </div>
 
-        <div class="dash-content">
+        <div class="dash-content" id="Statistics">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
+                    <span class="sectionHeader">Statistics</span>
                 </div>
 
                 <div class="boxes">
@@ -100,113 +90,13 @@
                 </div>
             </div>
 
-            <div class="activity">
+            <div class="activity" id="MapTable">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">New Activity</span>
-                </div>
-
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Name</span>
-                        <span class="data-list">Bill Hader</span>
-                        <span class="data-list">Stephen Root</span>
-                        <span class="data-list">Sarah Goldberg</span>
-                        <span class="data-list">Anthony Carrigan</span>
-                        <span class="data-list">Henry Wrinkler</span>
-                    </div>
-                    <div class="data email">
-                        <span class="data-title">Email</span>
-                        <span class="data-list">barryberkman@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">sallyreed@gmail.com</span>
-                        <span class="data-list">nohohank@gmail.com</span>
-                        <span class="data-list">genecousineau@gmail.com</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-04-20</span>
-                        <span class="data-list">2022-04-20</span>
-                        <span class="data-list">2022-04-20</span>
-                        <span class="data-list">2022-04-20</span>
-                        <span class="data-list">2022-04-20</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">Admin</span>
-                        <span class="data-list">Admin</span>
-                        <span class="data-list">Admin</span>
-                        <span class="data-list">Admin</span>
-                        <span class="data-list">Admin</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Approved</span>
-                        <span class="data-list">Approved</span>
-                        <span class="data-list">Approved</span>
-                        <span class="data-list">Approved</span>
-                        <span class="data-list">Approved</span>
-                    </div>
+                    <a href="@Url.Action("Index","MapMarkers")" class="sectionHeader">Map Table</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="location" class="location">
-        <div class="title-text">
-            <p>Table 1: Map Marker</p>
-            <h1>Edit the location at the section below</h1>
-        </div>
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>markerId</th>
-                    <th>longitude</th>
-                    <th>latitude</th>
-                    <th>Function</th>
-                    <th>Function</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1.189616</td>
-                    <td>123.1816</td>
-                    <td><a href="" target="_blank">Edit</a></td>
-                    <td><a href="" target="_blank">Delete</a></td>
-                </tr>
-                <tr class="active-row">
-                    <td>2</td>
-                    <td>1.186133</td>
-                    <td>165.15671865</td>
-                    <td><a href="" target="_blank">Edit</a></td>
-                    <td><a href="" target="_blank">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>1.8496131</td>
-                    <td>113.16816163</td>
-                    <td><a href="" target="_blank">Edit</a></td>
-                    <td><a href="" target="_blank">Delete</a></td>
-                </tr>
-                <tr class="active-row">
-                    <td>4</td>
-                    <td>1.16853843</td>
-                    <td>141.3651</td>
-                    <td><a href="" target="_blank">Edit</a></td>
-                    <td><a href="" target="_blank">Delete</a></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>1.47864564</td>
-                    <td>123.456373</td>
-                    <td><a href="" target="_blank">Edit</a></td>
-                    <td><a href="" target="_blank">Delete</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
 
     <script src="script.js"></script>
 </body>
