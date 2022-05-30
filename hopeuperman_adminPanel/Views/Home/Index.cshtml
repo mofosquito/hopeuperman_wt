@@ -29,9 +29,11 @@
 </head>
 <body>
     <nav>
-        <div class="logo-name">
-            <div class="logo-image">
-                <img src="images/logo.jpg">
+        <div>
+            <div>
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="images/logo.jpg" width="70" height="70">
+                </a>
             </div>
         </div>
 
@@ -41,6 +43,12 @@
                     <a href="#Statistics">
                         <i class="uil uil-estate"></i>
                         <span class="link-name">Statistics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#AdminTable">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Admin Table</span>
                     </a>
                 </li>
                 <li>
@@ -61,8 +69,6 @@
                 <i class="uil uil-search"></i>
                 <input type="text" placeholder="Search here...">
             </div>
-
-            @*<img src="images/profile.jpg">*@
         </div>
 
         <div class="dash-content" id="Statistics">
@@ -87,6 +93,12 @@
                         <span class="text">User Feedback</span>
                         <span class="number">2</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="activity" id="AdminTable">
+                <div class="title">
+                    <a href="@Url.Action("Index","AdminDatas")" class="sectionHeader">Admin Table</a>
                 </div>
             </div>
 

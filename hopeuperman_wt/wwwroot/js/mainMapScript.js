@@ -77,9 +77,9 @@ $.ajax({
                 '<br/><b>Main Language:</b> ' + data[i].mainLangauge +
                 '<br/><b>Dialect:</b> ' + data[i].dialect +
                 /*'<br/><b>Audio:</b> ' + data[i].audioFile +*/
-                '<br/><b>Translation:</b> ' + data[i].translation;
-                /*'<br/><b>Tag:</b> ' + data[i].tag;*/
-
+                '<br/><b>Translation:</b> ' + data[i].translation +
+                '<br/><b>Read more:</b> ' + '<a href=/Home/Dialeclopedia>Click here</a>';
+                ///*'<br/><b>Tag:</b> ' + data[i].tag;*/
 
             L.marker([data[i].latitude, data[i].longitude])
                 .bindPopup(popup)

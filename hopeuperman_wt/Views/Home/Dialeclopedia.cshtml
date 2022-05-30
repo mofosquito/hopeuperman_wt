@@ -5,33 +5,61 @@
 
 <html>
 <head>
+    <style>
+        .indexBorder {
+            border-style: inset;
+            border-width: thick;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        .audioBorder {
+            border-style: inset;
+            border-width: thin;
+            width: fit-content;
+            padding: 10px;
+        }
+
+        .smallerText {
+            font-size: smaller;
+        }
+    </style>
 </head>
 <body>
     <section class="container" role="navigation">
         <br />
-        <div>
-            <h4>Table of Content</h4>
-        </div>
-        <div>
-            <ul>
-                <li id="Iban">
-                    <a href="#ibanContent">Iban</a>
-                    <ul>
-                        <li id="Mualang"><a href="#mualangContent">Mualang</a>
-                        <li id="Remun/Milikin"><a href="#remun/milikinContent">Remun/Milikin</a>
-                        <li id="Sebuyau"><a href="#sebuyauContent">Sebuyau</a>
-                    </ul>
-                </li>
+        <div class="indexBorder">
+            <div>
+                <h4>Table of Content</h4>
+            </div>
+            <div>
+                <ul>
+                    <li id="Iban">
+                        <a href="#ibanContent">Iban</a>
+                        <ul>
+                            <li id="Saribas"><a href="#saribasContent">Saribas</a>
+                            <li id="Remun/Milikin"><a href="#remun/milikinContent">Remun/Milikin</a>
+                            <li id="Sebuyau"><a href="#sebuyauContent">Sebuyau</a>
+                        </ul>
+                    </li>
 
-                <li id="Chinese">
-                    <a href="#chineseContent">Chinese</a>
-                    <ul>
-                        <li id="Foochow"><a href="#foochowContent">Foochow</a>
-                        <li id="Cantonese"><a href="#cantoneseContent">Cantonese</a>
-                        <li id="Hokkien"><a href="#hokkienContent">Hokkien</a>
-                    </ul>
-                </li>
-            </ul>
+                    <li id="Chinese">
+                        <a href="#chineseContent">Chinese</a>
+                        <ul>
+                            <li id="Foochow"><a href="#foochowContent">Foochow</a>
+                            <li id="Cantonese"><a href="#cantoneseContent">Cantonese</a>
+                            <li id="Hokkien"><a href="#hokkienContent">Hokkien</a>
+                        </ul>
+                    </li>
+
+                    <li id="Malay">
+                        <a href="#malayContent">Malay</a>
+                        <ul>
+                            <li id="sarawakMalay"><a href="#sarawakMalayContent">Sarawak Malay</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <br />
@@ -42,92 +70,155 @@
     <section class="container">
         <h4 id="ibanContent">Iban</h4>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.
+            The Iban (yi-bɑːn) people is a branch of the Dayak people on the island of Borneo in Southeast Asia. The term
+            "Dayak" is believed to be the title given by the westerners to the local poeple of Borneo island.
+            The language spoken by them is also called Iban, or <i>jaku Iban</i>, which is a Malayo-Polynesian
+            branch of Austronesian language family.<br />
+            The Iban people speak basically one language with regional dialects that varies in intonation.
         </p>
         <ul>
             <li>
-                <h5 id="mualangContent">Mualang</h5>
+                <h5 id="saribasContent">Saribas</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    Saribas is among all the dialects of the Iban language, the most formal, imtermediate, and
+                    working dialect. This dialect is taught in school and is mainly spoken around Betong and Saratok.
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Saribas dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/placeholder1.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Lorem Ipsum</i></p>
+                </div><br />
             </li>
+
             <li>
                 <h5 id="remun/milikinContent">Remun/Milikin</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    Remun dialect is quite different compare to the other Iban dialects.
+                    Most Iban people who speaks Remun also speaks Bidayuh Bukar-Sadong,
+                    which may be considered more difficult than the standard Bidayuh.
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Remun/Milkin Language:</i></p>
+                    <audio controls>
+                        <source src="~/audio/placeholder2.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Lorem Ipsum</i></p>
+                </div><br />
             </li>
+
             <li>
                 <h5 id="sebuyauContent">Sebuyau</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    This dialect has further more variation down the line, but they are
+                    intelligible without much problem.
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Sebuyau dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/Iban_Sebuyau_The-Weather-is-Nice-Today.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: The weather is nice today.</i></p>
+                </div><br />
             </li>
         </ul>
         <br />
         <br />
         <h4 id="chineseContent">Chinese</h4>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.
+            This history of the Chinese people's migration to Borneo and Sarawak is a long story. If
+            you want the long story, you can visit this <a href="https://borneohistory.net/?p=150">website</a>.
+            Part of the story is that the Hockchius and Hockhias migrated to Nanyang (Southeast Asia) in much
+            smaller numbers compared to the Hokkien, Cantonese, Hakkas, and Hainanese but achieved remarkable
+            success. Amongst others, Robert Kuok rose to become the "Sugar King" of Malaysia.
         </p>
         <ul>
             <li>
                 <h5 id="foochowContent">Foochow</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    Also known as Fuzhou, Hokchew, Hok-chiu, or Fuzhounese, this dialect is the prestige variety of
+                    the Eastern Min branch of Min Chinese spoken mainly in the Mindong region of Eastern Fujian Province
+                    in China. But after the influx of immigrants from Fuzhou, China in the late 19th century and early
+                    1900s, one of the Malaysian city called Sibu is also known as the "New Fuzhou".
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Foochow dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/Chinese_Foochow_Who-Are-You-Why-Are-You-Under-My-Bed.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Who are you? Why are you under my bed?</i></p>
+                </div><br />
             </li>
+
             <li>
                 <h5 id="cantoneseContent">Cantonese</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    In Malaysia, Cantonese is widely spoken amongst the Malaysian Chinese community in Kuala Lumpur, however,
+                    they are also found in Sarawak as well. Malaysian Cantonese is not uniform throughout the country as there
+                    are variation between individuals and areas. It is mutually intelligible with Cantonese spoken in Hong Kong
+                    and Guanzhou but has distinct differences in vocabulary and pronunciation which make it unique.
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Cantonese dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/Chinese_Cantonese_Are-you-full.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Are you full?</i></p>
+                </div><br />
             </li>
+
             <li>
-                <h5 id"hokkienContent">Hokkien</h5>
+                <h5 id="hokkienContent">Hokkien</h5>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
+                    Hokkien, also known as Bân-lâm-ōe amongst many others, is a Southern Min language originating from
+                    the Minnan region of the southeastern part of Fujian province in Southeastern Mainlain China. Other
+                    than its widely usage in Sarawak and other Malaysian states, it is also widely spoken in Taiwan.
                 </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Hokkien dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/Chinese_Hokkien_Are-You-Free.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Are you free?</i></p>
+                </div><br />
+            </li>
+        </ul>
+        <br />
+        <br />
+        <h4 id="malayContent">Malay</h4>
+        <p>
+            Malay language is an Austronesian language officially spoken in Malaysia, Singapore, Indonesia, and Brunei.
+            Also known as <i>Bahasa Kebangsaan</i> in Malaysia, meaning national language. There is a group of closely
+            related languages spoken by Malays and related peoples across Brunei, Indonesia, Malaysia, Singapore, Southern
+            Thailand, and the far southern parts of the Philippines. They have traditionally been classified as Malay,
+            Para-Malay, and Aboriginal Malay, but this reflects geography and ethnicity rather than a proper linguistic
+            classification. The Malayan languages are mutually intelligible to varying extents, though the distinction
+            between language and dialect is unclear in many cases.
+        </p>
+        <ul>
+            <li>
+                <h5 id="sarawakMalayContent">Sarawak Malay</h5>
+                <p> 
+                    Sarawak Malay is a Malayic language native to the State of Sarawak. It is a common language used by
+                    natives of Sarawak. This variant is related to Bruneian Malay, spoken in the districts of Limbang and
+                    Lawas (Sarawak) and bears strong similarities with Sanggau, Sintang and Sekadau Malay spoken in the
+                    northern part of the West Kalimantan province in Indonesia.
+                </p>
+                <br />
+                <div class=" audioBorder">
+                    <p class="smallertext"><i>Sample audio of the Sarawak Malay dialect:</i></p>
+                    <audio controls>
+                        <source src="~/audio/placeholder3.mp3" type="audio/mp3" />
+                    </audio>
+                    <p class="smallertext"><i>Translation: Lorem Ipsum</i></p>
+                </div><br />
             </li>
         </ul>
     </section>
